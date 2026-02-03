@@ -48,6 +48,8 @@ section {
 /* Each timeline card */
 section > div {
     width: 280px;
+    position: relative;
+    overflow: hidden;
 }
 
 /* Make card images horizontal (wide) */
@@ -56,6 +58,30 @@ section img {
     height: auto;
     display: block;
     margin: 8px 0;
+}
+
+/* Hover overlay for cards */
+section > div::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show overlay on hover */
+section > div:hover::after {
+    opacity: 1;
 }
 
 /* Mobile device media query */
