@@ -16,48 +16,49 @@ body {
 /* Header / hero section */
 header {
     text-align: center;
-    padding: 32px 16px;
+    padding: 16px 16px;
     /* Gradient background (top to bottom) */
     background: linear-gradient(180deg, #f1b1e0 0%, #f10191 70%);
 }
 
 /* Intel logo - keep it responsive */
 header img {
-    width: 25%;      /* default size */
+    width: 15%;      /* smaller size */
     max-width: 90%;    /* shrink on small screens */
     height: auto;      /* keep aspect ratio */
     display: block;
-    margin: 0 auto 16px;
-
+    margin: 0 auto 8px;
 }
 
 /* Main heading spacing */
 h1 {
-    margin-bottom: 12px;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
 }
 
-/* Timeline layout - show 3 cards at a time */
+/* Timeline layout - horizontal scrolling */
 section {
     display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 12px;
     padding: 16px;
+    overflow-x: auto;
 }
 
-/* Each timeline card - 3 per row */
+/* Each timeline card - fixed width for scrolling */
 section > div {
-    width: calc(33.333% - 11px);
+    width: 260px;
     position: relative;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 /* Make card images horizontal (wide) */
 section img {
-    width: 100%;
+    width: 90%;
     height: auto;
     display: block;
-    margin: 8px 0;
+    margin: 8px auto;
 }
 
 /* Hide h3 on hover and show paragraph */
@@ -90,7 +91,7 @@ section > div p {
 }
 
 section > div:hover p {
-    opacity: 1;
+        opacity: 1;
 }
 
 /* Mobile device media query */
