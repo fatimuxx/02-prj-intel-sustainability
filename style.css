@@ -1,1 +1,78 @@
 /* Add your CSS here */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #111;
+    background-color: #efc7e4;
+}
+
+/* Header / hero section */
+header {
+    text-align: center;
+    padding: 32px 16px;
+    /* Gradient background (top to bottom) */
+    background: linear-gradient(180deg, #f1b1e0 0%, #f10191 70%);
+}
+
+/* Intel logo - keep it responsive */
+header img {
+    width: 25%;      /* default size */
+    max-width: 90%;    /* shrink on small screens */
+    height: auto;      /* keep aspect ratio */
+    display: block;
+    margin: 0 auto 16px;
+
+}
+
+/* Main heading spacing */
+h1 {
+    margin-bottom: 12px;
+}
+
+/* Timeline layout */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 16px;
+}
+
+/* Each timeline card */
+section > div {
+    width: 280px;
+}
+
+/* Make card images horizontal (wide) */
+section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 8px 0;
+}
+
+/* Mobile device media query */
+@media (max-width: 600px) {
+    header {
+        padding: 24px 12px;
+    }
+
+    header img {
+        width: 180px;  /* slightly smaller logo on phones */
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
